@@ -9,7 +9,7 @@ namespace TPtest
     {
         Bitmap map;
         byte[] pix;
-        string sss;
+        //string sss;
         static char key;
         public Form1()
         {
@@ -183,20 +183,10 @@ namespace TPtest
             }
             else
             {
-                this.richTextBox1.AppendText(sss);
+                //this.richTextBox1.AppendText(sss);
             }
 
         }
-
-
-
-
-
-
-
-
-
-
 
         private void btn_showText_Click(object sender, EventArgs e)
         {
@@ -234,18 +224,10 @@ namespace TPtest
             }
             else
             {
-                rs = BCutEncrypt(sss);
-                this.richTextBox1.AppendText("jiemi:"+rs);
+                //rs = BCutEncrypt(sss);
+                //this.richTextBox1.AppendText("jiemi:"+rs);
             }
         }
-
-
-
-
-
-
-
-
 
         private void inputText_TextChanged(object sender, EventArgs e)
         {
@@ -257,36 +239,18 @@ namespace TPtest
 
             String es = BCutEncrypt(inputText.Text);
             String bs = bianma(es);
-            sss = bs;
+            //sss = bs;
             this.richTextBox1.Clear();
-            richTextBox1.AppendText("jiami：" + es+"    2jinzhi:"+bs+"     sss"+sss);
-            //if (map == null) return;
-            //String t4 = bianma("5",1);
-            //int kk = 10 ^ 1;
-            //int l = t4.Length;
-            //byte tt = 0;
-            //String tk = Convert.ToString(kk, 2).PadLeft(16, '0');
-            //richTextBox1.AppendText("t4的16位二进制：" + t4 + "      长度：" + l + "      t4转换后："+Convert.ToInt32(t4,2));
-            //richTextBox1.AppendText("t4的16位二进制：" + t4);
-            //String tk1 = Convert.ToString(kk, 2).PadLeft(16, '0');
-            //richTextBox1.AppendText("     16位二进制为：" + tk + "      tk.length:" + tk.Length);
-            //int i = Convert.ToInt32(t4, 2);
-            //int t3 = 2 ^ 13;
-            //char key = 'n';
-            //richTextBox1.AppendText(Convert.ToString(2, 2).PadLeft(16, '0') + "   "+ Convert.ToString(13, 2).PadLeft(16, '0') + "   "+"t3：" + Convert.ToString(t3,2).PadLeft(16, '0'));
-            //string s = BCutEncrypt(t4, key);
-            //string ss = BCutEncrypt(s, key);
-            //richTextBox1.AppendText(t4.PadLeft(16, '0')+"    jiami :" +s+"   jiemi:"+ ss);
-
-            //richTextBox1.AppendText("t4：" + Convert.ToString(i));
+            //richTextBox1.AppendText("jiami：" + es+"    2jinzhi:"+bs+"     sss"+sss);
+           
         }
 
         private void btn_showImg_Click(object sender, EventArgs e)
         {
             //if (map == null) return;
-            String es = jiema(sss);
+           /* String es = jiema(sss);
             String bs = BCutEncrypt(es);
-            this.richTextBox1.AppendText("     sss" + sss+"       jiamma:" +es+"     jiemi:"+bs);
+            this.richTextBox1.AppendText("     sss" + sss+"       jiamma:" +es+"     jiemi:"+bs);*/
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
