@@ -31,7 +31,6 @@
             this.btn_open = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_readPix = new System.Windows.Forms.Button();
-            this.btn_changePix = new System.Windows.Forms.Button();
             this.btn_hideText = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,12 +40,16 @@
             this.btn_showImg = new System.Windows.Forms.Button();
             this.input_key = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_open
             // 
-            this.btn_open.Location = new System.Drawing.Point(13, 13);
+            this.btn_open.Location = new System.Drawing.Point(119, 7);
             this.btn_open.Name = "btn_open";
             this.btn_open.Size = new System.Drawing.Size(100, 30);
             this.btn_open.TabIndex = 0;
@@ -56,7 +59,7 @@
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(119, 13);
+            this.btn_save.Location = new System.Drawing.Point(225, 7);
             this.btn_save.Name = "btn_save";
             this.btn_save.Size = new System.Drawing.Size(100, 30);
             this.btn_save.TabIndex = 1;
@@ -66,7 +69,7 @@
             // 
             // btn_readPix
             // 
-            this.btn_readPix.Location = new System.Drawing.Point(225, 13);
+            this.btn_readPix.Location = new System.Drawing.Point(331, 7);
             this.btn_readPix.Name = "btn_readPix";
             this.btn_readPix.Size = new System.Drawing.Size(100, 30);
             this.btn_readPix.TabIndex = 2;
@@ -74,19 +77,9 @@
             this.btn_readPix.UseVisualStyleBackColor = true;
             this.btn_readPix.Click += new System.EventHandler(this.btn_readPix_Click);
             // 
-            // btn_changePix
-            // 
-            this.btn_changePix.Location = new System.Drawing.Point(331, 13);
-            this.btn_changePix.Name = "btn_changePix";
-            this.btn_changePix.Size = new System.Drawing.Size(100, 30);
-            this.btn_changePix.TabIndex = 3;
-            this.btn_changePix.Text = "修改像素";
-            this.btn_changePix.UseVisualStyleBackColor = true;
-            this.btn_changePix.Click += new System.EventHandler(this.btn_changePix_Click);
-            // 
             // btn_hideText
             // 
-            this.btn_hideText.Location = new System.Drawing.Point(13, 50);
+            this.btn_hideText.Location = new System.Drawing.Point(119, 43);
             this.btn_hideText.Name = "btn_hideText";
             this.btn_hideText.Size = new System.Drawing.Size(100, 30);
             this.btn_hideText.TabIndex = 4;
@@ -101,7 +94,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(503, 767);
             this.richTextBox1.TabIndex = 5;
             this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // pictureBox1
             // 
@@ -110,11 +102,10 @@
             this.pictureBox1.Size = new System.Drawing.Size(436, 545);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_showText
             // 
-            this.btn_showText.Location = new System.Drawing.Point(119, 50);
+            this.btn_showText.Location = new System.Drawing.Point(225, 43);
             this.btn_showText.Name = "btn_showText";
             this.btn_showText.Size = new System.Drawing.Size(100, 30);
             this.btn_showText.TabIndex = 7;
@@ -124,16 +115,14 @@
             // 
             // inputText
             // 
-            this.inputText.Location = new System.Drawing.Point(13, 132);
+            this.inputText.Location = new System.Drawing.Point(259, 132);
             this.inputText.Name = "inputText";
-            this.inputText.Size = new System.Drawing.Size(436, 25);
+            this.inputText.Size = new System.Drawing.Size(190, 25);
             this.inputText.TabIndex = 8;
-            this.inputText.Text = "请输入需要隐藏的文本信息";
-            this.inputText.TextChanged += new System.EventHandler(this.inputText_TextChanged);
             // 
             // btn_hintImg
             // 
-            this.btn_hintImg.Location = new System.Drawing.Point(225, 50);
+            this.btn_hintImg.Location = new System.Drawing.Point(119, 79);
             this.btn_hintImg.Name = "btn_hintImg";
             this.btn_hintImg.Size = new System.Drawing.Size(100, 30);
             this.btn_hintImg.TabIndex = 9;
@@ -143,7 +132,7 @@
             // 
             // btn_showImg
             // 
-            this.btn_showImg.Location = new System.Drawing.Point(331, 50);
+            this.btn_showImg.Location = new System.Drawing.Point(225, 79);
             this.btn_showImg.Name = "btn_showImg";
             this.btn_showImg.Size = new System.Drawing.Size(100, 30);
             this.btn_showImg.TabIndex = 10;
@@ -169,13 +158,52 @@
             this.label1.Size = new System.Drawing.Size(217, 15);
             this.label1.TabIndex = 12;
             this.label1.Text = "请输入秘钥（一个字符长度）：";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(11, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 15);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "基本操作：";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 15);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "文本操作：";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(82, 15);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "图像操作：";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(17, 135);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(202, 15);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "请输入所需隐藏的文本信息：";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 791);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.input_key);
             this.Controls.Add(this.btn_showImg);
@@ -185,7 +213,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btn_hideText);
-            this.Controls.Add(this.btn_changePix);
             this.Controls.Add(this.btn_readPix);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_open);
@@ -202,7 +229,6 @@
         private System.Windows.Forms.Button btn_open;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button btn_readPix;
-        private System.Windows.Forms.Button btn_changePix;
         private System.Windows.Forms.Button btn_hideText;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -212,6 +238,10 @@
         private System.Windows.Forms.Button btn_showImg;
         private System.Windows.Forms.TextBox input_key;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
