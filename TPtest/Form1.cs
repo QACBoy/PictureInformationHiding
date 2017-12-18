@@ -27,6 +27,10 @@ namespace TPtest
             ofd.Filter = "BMP Files(*.bmp)|*.bmp|JPG File(*.jpg;*.jpeg)|*.jpg;*.jpeg|ALL Files(*.*)|*.*";
             ofd.CheckFileExists = true;
             ofd.CheckPathExists = true;
+
+            //初始化参数，保证当前的参数为空！
+            map = null;
+            pix = null;
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 map = new Bitmap(ofd.FileName);
@@ -231,9 +235,11 @@ namespace TPtest
                         //pixle[i] = Convert.ToByte(Convert.ToInt32(bs[i])-48);
                     }
                     savePix();
-                    this.richTextBox1.AppendText("信息隐藏成功！"+'\n');
+                    this.richTextBox1.AppendText("信息隐藏成功！");
                     //this.richTextBox1.AppendText("您隐藏的信息为：" + s + "\t 异或后：" + es + "\t 编码后：" + bs + '\n');
-                    this.richTextBox1.AppendText("您隐藏的信息为：" + s);
+                    this.richTextBox1.AppendText("\n\n  您隐藏的信息为：" + s);
+                    this.richTextBox1.AppendText("\n  您的解密秘钥为：" + input_key.Text);
+                    this.richTextBox1.AppendText("\n\n为防止加密信息遗失，请点击【保存图像】进行图像的保存 ！！！");
                     //showPix();
                 }
             }
